@@ -31,11 +31,10 @@
  helloWord实现：
  
  ```
-     func helloWorld(w http.ResponseWriter, r *http.Request)  {
+    func helloWorld(w http.ResponseWriter, r *http.Request)  {
         r.ParseForm();
         session,_ := manager.SessionStart(w,r);
         session.Add("abc","dddddddddddddddddddd");
-     
         value,_ := session.Get("abc");
      
         fmt.Fprintf(w,"hellow World!",value);
