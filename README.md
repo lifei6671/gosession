@@ -1,2 +1,4 @@
 # gosession
-基于Go实现的Session组件
+基于Go实现的Session组件，代码参考了Beego的Session部分。目前实现了基于内存的Session和基于文件的Session。
+
+通过实现SessionHandler和SessionProvider接口，可以扩展更多的储存方式。
