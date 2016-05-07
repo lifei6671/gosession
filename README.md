@@ -5,7 +5,7 @@
 
 使用方法：
 
-`
+```
   http.HandleFunc("/",helloWorld);
  	config := gosession.SessionConfig{
  		CookieName : "GO_SESSIONID",
@@ -26,15 +26,13 @@
  		fmt.Println(err);
  	}
  	fmt.Println("应用已启动")
-`
+```
 
  helloWord实现：
  
- `
+ ```
      func helloWorld(w http.ResponseWriter, r *http.Request)  {
- 
         r.ParseForm();
-     
         session,_ := manager.SessionStart(w,r);
         session.Add("abc","dddddddddddddddddddd");
      
@@ -42,4 +40,4 @@
      
         fmt.Fprintf(w,"hellow World!",value);
     }
-`
+```
